@@ -1,0 +1,24 @@
+<div ng-hide="isLoggedIn()">
+    <h2>Angular Login</h2>
+    <form class="pure-form pure-form-aligned" ng-submit="logUserIn()">
+        <fieldset>
+            <div class="pure-control-group">
+                <label>Hello, please sign in!</label>
+            </div>
+            <div class="pure-control-group">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" placeholder="Email Address" class="pure-input-1-2" required>
+            </div>
+            <div class="pure-control-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Password" class="pure-input-1-2" ng-minlength="5" required>
+            </div>
+            <div class="pure-controls">
+                <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div ng-show="isLoggedIn()">
+    <p>Welcome back!</p>
+</div>
